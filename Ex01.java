@@ -1,6 +1,37 @@
-class Ex01 {
-	public static void main(String[] args) {
-		System.out.println("ï¿½ì˜„è«›ë¶¿ì“½ è½…ï¿½!");
-		// ã…‡ã„´ã…ã…ã„´y yt
-	}
+package ict07.IO;
+
+public class Ex01 {
+	// File Å¬·¡½º : Æ¯Á¤ À§Ä¡¿¡ Á¸ÀçÇÏ´Â ÆÄÀÏÀÌ³ª µð·ºÅä¸®(Æú´õ)¸¦ Ã³¸®ÇÏ´Â Å¬·¡½º
+	// »ý¼ºÀÚ : File(File parent, String child), File(String pathname)
+	//			File(String parent, String child), File(URI uri)
+	// 		** parent => »óÀ§°æ·Î, child => ÇÏÀ§ °æ·Î 
+	//		   parent + child => ÀüÃ¼ °æ·Î
+	//		   pathname => ÀüÃ¼ °æ·Î
+	//		   uri => ³ªÁß ³×Æ®¿öÅ© ÇÒ¶§ ÇÊ¿ä
+	
+	// ÁÖ¿ä ¸Þ¼Òµå
+	// - createNewFile() : boolean => ÆÄÀÏÀ» »ý¼ºÇÏ¸é true
+	//								  ÆÄÀÏÀ» »ý¼ºÇÏÁö ¸øÇÏ¸é false (°°Àº ÀÌ¸§ÀÌ ÀÖÀ¸¸é »ý¼º¸øÇÔ)
+	// - mkdir(), mkdirs() : boolean => µð·ºÅä¸®¸¦ »ý¼ºÇÏ¸é true
+	//									µð·ºÅä¸®¸¦ »ý¼ºÇÏÁö ¸øÇÏ¸é false (°°Àº ÀÌ¸§ÀÌ ÀÖÀ¸¸é »ý¼º ¸øÇÔ)
+	// - mkdir(), mkdirs() Â÷ÀÌÁ¡
+	//   : ¸¸µé°íÀÚ ÇÏ´Â µð·ºÅä¸®ÀÇ »óÀ§ µð·ºÅä¸®°¡ Á¸ÀçÇÏÁö ¾ÊÀ» °æ¿ì »ý¼º ºÒ°¡ => mkdir()
+	//   ¿¹) c:\base\want => want µð·ºÅä¸®¸¦ ¸¸µé¶§, base µð·ºÅä¸®°¡ ¾ø´Â °æ¿ì »ý¼º ºÒ°¡
+	//                      »óÀ§ µð·ºÅä¸®ÀÎ base¿Í want µð·ºÅä¸®±îÁö ¸¸µé¾îÁØ´Ù => mkdirs()
+	// - delete() : ÆÄÀÏ, µð·ºÅä¸® »èÁ¦
+	// - isDirectory() : µð·ºÅä¸®ÀÌ¸é true
+	// - isFile() 	   : ÆÄÀÏÀÌ¸é true
+	//  ** ÀúÀåÃø¸é¿¡¼­ ÄÄÇ»ÅÍ¿¡´Â ÆÄÀÏ°ú µð·ºÅä¸®¸¸ Á¸ÀçÇÑ´Ù.
+	//		Áï, ÆÄÀÏÀÌ ¾Æ´Ï¸é µð·ºÅä¸®ÀÌ´Ù. µð·ºÅä¸®°¡ ¾Æ´Ï¸é ÆÄÀÏÀÌ´Ù.
+	// - **list() : ÁöÁ¤ÇÑ À§Ä¡ÀÇ ÆÄÀÏ ¹× µð·ºÅä¸®¸¦ String[]¿¡ ´ã´Â´Ù.
+	// - length() : ¹è¿­ÀÌ³ª String¿¡¼­´Â ±æÀÌ¸¦ ¶æÇÏÁö¸¸ 
+	//				File Å¬·¡½º¿¡¼­´Â ±æÀÌ°¡ ¾Æ´Ï¶ó ÆÄÀÏÀÇ Å©±â¸¦ byte·Î Ç¥ÇöÇÑ °Í
+	//				(¿ë·® : byte => KB => MB => GB => TB (ÇÑ´Ü°è¿Ã¶ó°¥¶§¸¶´Ù 1024(2ÀÇ10½Â)))
+	
+	// - getAbsolutePath() : Àý´ë °æ·Î Ç¥½Ã
+	//						 °æ·ÎÀÇ Ç®³×ÀÓ(½ÃÀÛºÎÅÍ ³¡±îÁö) => ¿©±â¼­ ½ÃÀÛÀº ·çÆ®¸¦ ¸»ÇÑ´Ù.
+	// - getPath()		   : »ó´ë °æ·Î Ç¥½Ã
+	//						 ÇöÀç À§Ä¡¿¡¼­ ÇØ´ç ÆÄÀÏ±îÁö Á¢±ÙÇÏ±â À§ÇØ °ÅÃÄ¾ß µÇ´Â °æ·Î
+	// - getCanonicalPath() : Á¤±ÔÈ­ °æ·Î
+	// - lastModified() : ¸¶Áö¸· ¼öÁ¤ ³¯Â¥
 }
